@@ -3,6 +3,8 @@ import 'package:flutter/material.dart';
 
 import './screens/about.dart' as _aboutPage;
 import './screens/borrow.dart' as _borrowPage;
+import './screens/casio.dart' as _casioPage;
+import './screens/dewalt.dart' as _dewaltPage;
 import './screens/lending.dart' as _lendingPage;
 import './screens/locate.dart' as _locatePage;
 import './screens/support.dart' as _supportPage;
@@ -38,7 +40,18 @@ void main() => runApp(new MaterialApp(
         builder: (_) => new _lendingPage.Lending(),
         settings: settings,
       );
-    case '/borrow': return new FromRightToLeft(
+      case '/casio':
+        return new FromRightToLeft(
+          builder: (_) => new _casioPage.Casio(),
+          settings: settings,
+        );
+      case '/dewalt':
+        return new FromRightToLeft(
+          builder: (_) => new _dewaltPage.Dewalt(),
+          settings: settings,
+        );
+      case '/borrow':
+        return new FromRightToLeft(
         builder: (_) => new _borrowPage.Borrow(),
         settings: settings,
       );

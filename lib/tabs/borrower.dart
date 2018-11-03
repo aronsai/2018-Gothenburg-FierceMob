@@ -46,22 +46,28 @@ class Borrower extends StatelessWidget {
                     children: <Widget>[
                       createItem('DEWALT DC759KA',
                           'My power drill! It works great for everyday stuff.',
-                          'Göran', context, 'lib/src/images/powerdrill.jpg'),
-                      createItem('DEWALT DC759KA',
-                          'My power drill! It works great for everyday stuff.',
-                          'Johan', context, 'lib/src/images/chainsaw.jpg'),
+                          'Göran', context, 'lib/src/images/powerdrill.jpg',
+                          '/borrow'),
+                      createItem('Chainsaw',
+                          'Pretty good chainsaw',
+                          'Johan', context, 'lib/src/images/chainsaw.jpg',
+                          '/dewalt'),
                       createItem('Casio FX-82 ES',
                           'Chalmers approved calculator',
-                          'Johanna', context, 'lib/src/images/casio.jpg'),
+                          'Johanna', context, 'lib/src/images/casio.jpg',
+                          '/casio'),
                       createItem('Lawn Mower',
                           'Get your garden trimmed!',
-                          'Olaf', context, 'lib/src/images/lawnmower.jpg'),
+                          'Olaf', context, 'lib/src/images/lawnmower.jpg',
+                          '/borrow'),
                       createItem('Hoover Linx Stick Vacuumcleaner',
                           'Like a lawn mower, but for your living-room.',
-                          'Hans', context, 'lib/src/images/vacuumcleaner.jpg'),
+                          'Hans', context, 'lib/src/images/vacuumcleaner.jpg',
+                          '/borrow'),
                       createItem('Our old skis',
                           'Our old skis, maybe someone can have fun with them.',
-                          'Katarina', context, 'lib/src/images/skis.jpg'),
+                          'Katarina', context, 'lib/src/images/skis.jpg',
+                          '/borrow'),
                     ],
                   )
               )
@@ -71,7 +77,7 @@ class Borrower extends StatelessWidget {
       );
 
   Card createItem(String title, String subtitle, String owner,
-      BuildContext context, String imageurl) {
+      BuildContext context, String imageurl, String path) {
     Card item = new Card(
       child: Column(
         mainAxisSize: MainAxisSize.min,
@@ -92,7 +98,7 @@ class Borrower extends StatelessWidget {
                 FlatButton(
                   child: const Text('Borrow it!'),
                   onPressed: () {
-                    Navigator.of(context).pushNamed('/borrow');
+                    Navigator.of(context).pushNamed(path);
 
                     /* ... */
                   },

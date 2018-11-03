@@ -5,9 +5,7 @@
 import 'package:flutter/material.dart';
 //import 'package:flutter/rendering.dart' show debugPaintSizeEnabled;
 
-class Borrow extends StatelessWidget {
-
-
+class Dewalt extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     Widget titleSection = Container(
@@ -21,7 +19,7 @@ class Borrow extends StatelessWidget {
                 Container(
                   padding: const EdgeInsets.only(bottom: 8.0),
                   child: Text(
-                    'Simply Spectacular PowerDrill',
+                    'Chainsaw',
                     style: TextStyle(
                       fontWeight: FontWeight.bold,
                       fontSize: 30.0,
@@ -77,7 +75,7 @@ class Borrow extends StatelessWidget {
     Widget textSection = Container(
       padding: const EdgeInsets.all(40.0),
       child: Text(
-        '''Check this out!! Dude, you have never seen better drill, believe me!''',
+        '''Pretty good chainsaw!''',
         softWrap: true,
       ),
     );
@@ -92,7 +90,7 @@ class Borrow extends StatelessWidget {
         body: ListView(
           children: [
             Image.asset(
-              'lib/src/images/powerdrill.jpg',
+              'lib/src/images/chainsaw.jpg',
               width: 75.0,
               height: 400.0,
               fit: BoxFit.cover,
