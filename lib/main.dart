@@ -202,7 +202,7 @@ class TabsState extends State<Tabs> {
               }
           ),
 
-          ),
+
 
           new Divider(),
           new ListTile(

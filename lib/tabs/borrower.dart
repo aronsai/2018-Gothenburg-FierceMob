@@ -48,7 +48,7 @@ class Borrower extends StatelessWidget {
                           'My power drill! It works great for everyday stuff.',
                           'Göran', context, 'lib/src/images/powerdrill.jpg'),
                       createItem('DEWALT DC759KA',
-                          'My power drill! It works great for everyday stuff.',
+                          'Good old chainsaw, gets the job done.',
                           'Johan', context, 'lib/src/images/chainsaw.jpg'),
                       createItem('Casio FX-82 ES',
                           'Chalmers approved calculator',
