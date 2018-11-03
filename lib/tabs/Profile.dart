@@ -17,22 +17,28 @@ class Profile extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.spaceEvenly,
           children:[
             new FittedBox(
-              child: new Text('John Johnson\n',),
+              child: new Text('John Johnson\n',style: TextStyle(
+                fontWeight: FontWeight.bold,
+                fontSize: 16.0,
+              ),
+              ),
             ),
             new Column(
               children: <Widget>[
                 new Icon(
                   Icons.star,
                   size: 10.0,
-                  color: Colors.redAccent,
+                  color: Colors.orangeAccent,
                 ),
-                new Text('4.5')
+                new Text('4.5'),
               ],
             ),
           ],
         ),
         new Column(
           children: <Widget>[
+            new Text( 'Borrowed and lent items',style: TextStyle(fontSize: 16.0, fontWeight: FontWeight.bold),),
+            new Divider(),
             new Row(
               crossAxisAlignment: CrossAxisAlignment.center,
               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
@@ -40,12 +46,13 @@ class Profile extends StatelessWidget {
                 new Text('Power Drill'),
                 new Column(
                   children: <Widget>[
-                    new Text('Stars = 4/5'),
-                    new Text('Type = Borrowed'),
+                    new Text('Stars : 4.0/5.0'),
+                    new Text('Type : Borrowed'),
                   ],
                 ),
               ],
             ),
+            new Divider(),
             new Row(
               crossAxisAlignment: CrossAxisAlignment.center,
               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
@@ -53,12 +60,26 @@ class Profile extends StatelessWidget {
                 new Text('Scew Driver'),
                 new Column(
                   children: [
-                    new Text('Stars = 5/5'),
-                    new Text('Type = Borrowed'),
+                    new Text('Stars : 5.0/5.0'),
+                    new Text('Type : Borrowed'),
                   ],
                 )
               ],
-            )
+            ),
+            new Divider(),
+            new Row(
+              crossAxisAlignment: CrossAxisAlignment.center,
+              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+              children: <Widget>[
+                new Text('Lawn Mower'),
+                new Column(
+                  children: [
+                    new Text('Stars : 1.0/5.0'),
+                    new Text('Type : Lent'),
+                  ],
+                )
+              ],
+            ),
           ],
         ),
       ],
