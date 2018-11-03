@@ -13,7 +13,7 @@ class Dashboard extends StatelessWidget {
               children: <Widget>[
                 const ListTile(
                   leading: Icon(Icons.album),
-                  title: Text('Item that is available to lend'),
+                  title: Text('Item that is available to borrow'),
                   subtitle: Text('More description'),
                 ),
                 ButtonTheme
@@ -21,7 +21,7 @@ class Dashboard extends StatelessWidget {
                   child: ButtonBar(
                     children: <Widget>[
                       FlatButton(
-                        child: const Text('Lend it!'),
+                        child: const Text('Borrow it!'),
                         onPressed: () {
                           /* ... */
                         },
