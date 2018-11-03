@@ -21,7 +21,6 @@ class Home extends StatelessWidget {
       ),
 
       new Column(
-
         children: <Widget>[
           new Padding(
               padding: const EdgeInsets.all(20.0),
@@ -33,18 +32,11 @@ class Home extends StatelessWidget {
                   createItem('DEWALT DC759KA',
                       'My power drill! It works great for everyday stuff.',
                       'Göran', context),
-                  createItem('DEWALT DC759KA',
-                      'My power drill! It works great for everyday stuff.',
-                      'Göran', context),
-                  createItem('DEWALT DC759KA',
-                      'My power drill! It works great for everyday stuff.',
-                      'Göran', context),
-                  createItem('DEWALT DC759KA',
-                      'My power drill! It works great for everyday stuff.',
-                      'Göran', context),
-                  createItem('DEWALT DC759KA',
-                      'My power drill! It works great for everyday stuff.',
-                      'Göran', context),
+                  FlatButton.icon(onPressed: () {
+                    Navigator.of(context).pushNamed('/lending');
+                  },
+                      icon: Icon(Icons.add_circle),
+                      label: Text("Share something new!", textScaleFactor: 1.3))
                 ],
               )
           )

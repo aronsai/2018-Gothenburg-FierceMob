@@ -188,14 +188,6 @@ class TabsState extends State<Tabs> {
             }
           ),
           new ListTile(
-              leading: new Icon(Icons.chat),
-              title: new Text('Lending'),
-              onTap: () {
-                Navigator.pop(context);
-                Navigator.of(context).pushNamed('/lending');
-              }
-          ),
-          new ListTile(
               leading: new Icon(Icons.gavel),
               title: new Text('Borrow'),
               onTap: () {
