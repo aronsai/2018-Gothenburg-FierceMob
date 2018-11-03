@@ -225,7 +225,7 @@ class TabItem {
 }
 
 const List<TabItem> TabItems = const <TabItem>[
-  const TabItem(title: 'Home', icon: Icons.home),
   const TabItem(title: 'Dashboard', icon: Icons.dashboard),
+  const TabItem(title: 'Home', icon: Icons.nature_people),
   const TabItem(title: 'Settings', icon: Icons.settings)
 ];
