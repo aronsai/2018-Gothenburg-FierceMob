@@ -1,19 +1,20 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
-import './screens/about.dart' as _aboutPage;
 import './screens/lending.dart' as _lendingPage;
+import './screens/borrow.dart' as _borrowPage;
+import './screens/about.dart' as _aboutPage;
 import './screens/support.dart' as _supportPage;
-import './tabs/Profile.dart' as _fourthTab;
 import './tabs/borrower.dart' as _firstTab;
 import './tabs/home.dart' as _secondTab;
 import './tabs/settings.dart' as _thirdTab;
+import './tabs/Profile.dart' as _fourthTab;
 
 void main() => runApp(new MaterialApp(
   title: 'fiercemob sharing app',
   theme: new ThemeData(
       primarySwatch: Colors.lightGreen,
-      scaffoldBackgroundColor: Colors.white,
+    scaffoldBackgroundColor: Colors.white,
       primaryColor: Colors.lightGreen, backgroundColor: Colors.blueGrey
   ),
   home: new Tabs(),
@@ -29,6 +30,10 @@ void main() => runApp(new MaterialApp(
       );
       case '/lending': return new FromRightToLeft(
         builder: (_) => new _lendingPage.Lending(),
+        settings: settings,
+      );
+    case '/borrow': return new FromRightToLeft(
+        builder: (_) => new _borrowPage.Borrow(),
         settings: settings,
       );
     }
@@ -85,7 +90,7 @@ class Tabs extends StatefulWidget {
 }
 
 class TabsState extends State<Tabs> {
-  
+
   PageController _tabController;
 
   var _title_app = null;
@@ -110,7 +115,7 @@ class TabsState extends State<Tabs> {
     //App Bar
     appBar: new AppBar(
       title: new Text(
-        _title_app, 
+        _title_app,
         style: new TextStyle(
           fontSize: Theme.of(context).platform == TargetPlatform.iOS ? 17.0 : 20.0,
         ),
@@ -133,7 +138,7 @@ class TabsState extends State<Tabs> {
     //Tabs
     bottomNavigationBar: Theme.of(context).platform == TargetPlatform.iOS ?
       new CupertinoTabBar(
-        activeColor: Colors.blueGrey,
+        activeColor: Colors.deepOrange,
         currentIndex: _tab,
         onTap: onTap,
         items: TabItems.map((TabItem) {
@@ -148,7 +153,6 @@ class TabsState extends State<Tabs> {
         onTap: onTap,
         items: TabItems.map((TabItem) {
           return new BottomNavigationBarItem(
-            backgroundColor: Colors.lightGreen,
             title: new Text(TabItem.title),
             icon: new Icon(TabItem.icon),
           );
@@ -168,7 +172,7 @@ class TabsState extends State<Tabs> {
               ),
               child: new Center(
                 child: new Image.asset(
-                    'lib/src/logo.png',
+                    'lib/src/images/logo.png',
                     width: 250.0
                 ),
               ),
@@ -183,14 +187,29 @@ class TabsState extends State<Tabs> {
             }
           ),
           new ListTile(
-              leading: new Icon(Icons.forward),
+              leading: new Icon(Icons.chat),
               title: new Text('Lending'),
               onTap: () {
                 Navigator.pop(context);
                 Navigator.of(context).pushNamed('/lending');
               }
           ),
-
+          new ListTile(
+              leading: new Icon(Icons.gavel),
+              title: new Text('Borrow'),
+              onTap: () {
+                Navigator.pop(context);
+                Navigator.of(context).pushNamed('/borrow');
+              }
+          ),
+          new Divider(),
+          new ListTile(
+            leading: new Icon(Icons.exit_to_app),
+            title: new Text('Sign Out'),
+            onTap: () {
+              Navigator.pop(context);
+            }
+          ),
           AboutListTile(
             applicationName: 'Team fiercemob\'s sharing app',
             applicationIcon: new Icon(Icons.info),
@@ -234,7 +253,7 @@ class TabItem {
 }
 
 const List<TabItem> TabItems = const <TabItem>[
-  const TabItem(title: 'Borrow', icon: Icons.home),
+  const TabItem(title: 'Borrow', icon: Icons.gavel),
   const TabItem(title: 'Home', icon: Icons.dashboard),
   const TabItem(title: 'Settings', icon: Icons.settings),
   const TabItem(title: 'Profile', icon: Icons.face)

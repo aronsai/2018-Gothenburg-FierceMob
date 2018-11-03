@@ -4,70 +4,71 @@ enum Category { tools, all }
 
 class Borrower extends StatelessWidget {
   @override
-  Widget build(BuildContext context) => new Container(
-      child: new ListView(
-        children: <Widget>[
-          Padding(
-            padding: const EdgeInsets.all(20.0),
-            child: new Row(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: <Widget>[
-                new FlatButton.icon(onPressed: () {
-                  showDialog(
-                    context: context,
-                    builder: (BuildContext context) {
-                      return SimpleDialog(
-                        children: <Widget>[
-                          Padding(
-                            padding: const EdgeInsets.all(20.0),
-                            child: TextField(
-                              decoration: InputDecoration(
-                                  border: OutlineInputBorder(),
-                                  hintText: 'Search'
+  Widget build(BuildContext context) =>
+      new Container(
+          child: new ListView(
+            children: <Widget>[
+              Padding(
+                padding: const EdgeInsets.all(20.0),
+                child: new Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: <Widget>[
+                    new FlatButton.icon(onPressed: () {
+                      showDialog(
+                        context: context,
+                        builder: (BuildContext context) {
+                          return SimpleDialog(
+                            children: <Widget>[
+                              Padding(
+                                padding: const EdgeInsets.all(20.0),
+                                child: TextField(
+                                  decoration: InputDecoration(
+                                      border: OutlineInputBorder(),
+                                      hintText: 'Search'
+                                  ),
+                                ),
                               ),
-                            ),
-                          ),
-                          FlatButton(onPressed: () {}, child: Text("Go"))
-                        ],
+                              FlatButton(onPressed: () {}, child: Text("Go"))
+                            ],
+                          );
+                        },
                       );
                     },
-                  );
-                },
-                    icon: Icon(Icons.search),
-                    label: Text("Search")),
-                CategorySelector()
-              ],
-            ),
-          ),
-          new Padding(
-              padding: const EdgeInsets.all(20.0),
-              child: new Column(
-                children: <Widget>[
-                  createItem('DEWALT DC759KA',
-                      'My power drill! It works great for everyday stuff.',
-                      'Göran', context),
-                  createItem('DEWALT DC759KA',
-                      'My power drill! It works great for everyday stuff.',
-                      'Göran', context),
-                  createItem('DEWALT DC759KA',
-                      'My power drill! It works great for everyday stuff.',
-                      'Göran', context),
-                  createItem('DEWALT DC759KA',
-                      'My power drill! It works great for everyday stuff.',
-                      'Göran', context),
-                  createItem('DEWALT DC759KA',
-                      'My power drill! It works great for everyday stuff.',
-                      'Göran', context),
-                  createItem('DEWALT DC759KA',
-                      'My power drill! It works great for everyday stuff.',
-                      'Göran', context),
-                ],
+                        icon: Icon(Icons.search),
+                        label: Text("Search")),
+                    CategorySelector()
+                  ],
+                ),
+              ),
+              new Padding(
+                  padding: const EdgeInsets.all(20.0),
+                  child: new Column(
+                    children: <Widget>[
+                      createItem('DEWALT DC759KA',
+                          'My power drill! It works great for everyday stuff.',
+                          'Göran', context),
+                      createItem('DEWALT DC759KA',
+                          'My power drill! It works great for everyday stuff.',
+                          'Göran', context),
+                      createItem('DEWALT DC759KA',
+                          'My power drill! It works great for everyday stuff.',
+                          'Göran', context),
+                      createItem('DEWALT DC759KA',
+                          'My power drill! It works great for everyday stuff.',
+                          'Göran', context),
+                      createItem('DEWALT DC759KA',
+                          'My power drill! It works great for everyday stuff.',
+                          'Göran', context),
+                      createItem('DEWALT DC759KA',
+                          'My power drill! It works great for everyday stuff.',
+                          'Göran', context),
+                    ],
+                  )
               )
+            ],
           )
-        ],
-      )
 
-  );
+      );
 
   Card createItem(String title, String subtitle, String owner,
       BuildContext context) {
@@ -105,8 +106,9 @@ class Borrower extends StatelessWidget {
     );
     return item;
   }
-
 }
+}
+
 
 
 
@@ -139,4 +141,5 @@ class _CategorySelectorState extends State<CategorySelector> {
       ],
     );
   }
+
 }
