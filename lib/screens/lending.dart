@@ -27,7 +27,7 @@ class Lending extends StatelessWidget {
         body: new Column(
           children: <Widget>[
             const Divider(
-              height: 4.0,
+              height: 10.0,
             ),
             new Text("Please specify what you want to lend",
               style: new TextStyle(
@@ -37,39 +37,36 @@ class Lending extends StatelessWidget {
               ),
 
             ),
+            const Divider(
+              height: 4.0,
+            ),
             new ListTile(
               leading: const Icon(Icons.content_cut),
               title: new TextField(
                 decoration: new InputDecoration(
-                  hintText: "Name",
+                  hintText: "Name of your device",
                 ),
               ),
             ),
             new ListTile(
-              leading: const Icon(Icons.phone),
+              leading: const Icon(Icons.euro_symbol),
               title: new TextField(
                 decoration: new InputDecoration(
-                  hintText: "Phone",
+                  hintText: "Price",
                 ),
               ),
             ),
             new ListTile(
-              leading: const Icon(Icons.email),
+              leading: const Icon(Icons.format_list_numbered),
               title: new TextField(
                 decoration: new InputDecoration(
-                  hintText: "Email",
+                  hintText: "Points for device",
                 ),
               ),
             ),
             const Divider(
               height: 1.0,
             ),
-            new ListTile(
-              leading: const Icon(Icons.label),
-              title: const Text('Nick'),
-              subtitle: const Text('None'),
-            ),
-
             new ListTile(
               leading: const Icon(Icons.content_cut),
               title: const Text('Tool-group'),
