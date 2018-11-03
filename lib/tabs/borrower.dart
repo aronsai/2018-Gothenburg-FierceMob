@@ -46,7 +46,8 @@ class Borrower extends StatelessWidget {
                     children: <Widget>[
                       createItem('DEWALT DC759KA',
                           'My power drill! It works great for everyday stuff.',
-                          'Göran', context, 'lib/src/images/powerdrill.jpg', '/borrow'),
+                          'Göran', context, 'lib/src/images/powerdrill.jpg',
+                          '/borrow'),
                       createItem('Chainsaw',
                           'Pretty good chainsaw',
                           'Johan', context, 'lib/src/images/chainsaw.jpg',

@@ -2,11 +2,11 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 import './screens/about.dart' as _aboutPage;
-import './screens/locate.dart' as _locatePage;
 import './screens/borrow.dart' as _borrowPage;
 import './screens/casio.dart' as _casioPage;
 import './screens/dewalt.dart' as _dewaltPage;
 import './screens/lending.dart' as _lendingPage;
+import './screens/locate.dart' as _locatePage;
 import './screens/support.dart' as _supportPage;
 import './tabs/Profile.dart' as _fourthTab;
 import './tabs/borrower.dart' as _firstTab;
@@ -219,11 +219,11 @@ class TabsState extends State<Tabs> {
 
           new Divider(),
           new ListTile(
-            leading: new Icon(Icons.exit_to_app),
-            title: new Text('Sign Out'),
-            onTap: () {
-              Navigator.pop(context);
-            }
+              leading: new Icon(Icons.exit_to_app),
+              title: new Text('Sign Out'),
+              onTap: () {
+                Navigator.pop(context);
+              }
           ),
           AboutListTile(
             applicationName: 'Team fiercemob\'s sharing app',
