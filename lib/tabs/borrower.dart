@@ -11,10 +11,13 @@ class Borrower extends StatelessWidget {
             child: Column(
               mainAxisSize: MainAxisSize.min,
               children: <Widget>[
-                const ListTile(
-                  leading: Icon(Icons.album),
-                  title: Text('Item that is available to borrow'),
-                  subtitle: Text('More description'),
+                ListTile(
+                  leading: new CircleAvatar(
+                      child: new Image.asset('lib/src/powerdrill.jpg')
+                  ),
+                  title: Text('DEWALT DC759KA'),
+                  subtitle: Text(
+                      'My power drill! It works great for everyday stuff.'),
                 ),
                 ButtonTheme
                     .bar( // make buttons use the appropriate styles for cards

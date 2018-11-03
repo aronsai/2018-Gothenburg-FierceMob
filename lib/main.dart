@@ -4,8 +4,8 @@ import 'package:flutter/material.dart';
 import './screens/lending.dart' as _lendingPage;
 import './screens/about.dart' as _aboutPage;
 import './screens/support.dart' as _supportPage;
-import './tabs/borrower.dart' as _secondTab;
-import './tabs/home.dart' as _firstTab;
+import './tabs/borrower.dart' as _firstTab;
+import './tabs/home.dart' as _secondTab;
 import './tabs/settings.dart' as _thirdTab;
 
 void main() => runApp(new MaterialApp(
@@ -122,8 +122,8 @@ class TabsState extends State<Tabs> {
       controller: _tabController,
       onPageChanged: onTabChanged,
       children: <Widget>[
-        new _firstTab.Home(),
-        new _secondTab.Borrower(),
+        new _firstTab.Borrower(),
+        new _secondTab.Home(),
         new _thirdTab.Settings()
       ],
     ),
