@@ -11,6 +11,7 @@ import './tabs/borrower.dart' as _firstTab;
 import './tabs/home.dart' as _secondTab;
 import './tabs/settings.dart' as _thirdTab;
 
+
 void main() => runApp(new MaterialApp(
   title: 'fiercemob sharing app',
   theme: new ThemeData(
