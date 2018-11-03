@@ -195,7 +195,7 @@ class TabsState extends State<Tabs> {
           ),
           new ListTile(
               leading: new Icon(Icons.chat),
-              title: new Text('locate'),
+              title: new Text('Location'),
               onTap: () {
                 Navigator.pop(context);
                 Navigator.of(context).pushNamed('/locate');
@@ -204,13 +204,6 @@ class TabsState extends State<Tabs> {
 
 
           new Divider(),
-          new ListTile(
-            leading: new Icon(Icons.exit_to_app),
-            title: new Text('Sign Out'),
-            onTap: () {
-              Navigator.pop(context);
-            }
-          ),
           AboutListTile(
             applicationName: 'Team fiercemob\'s sharing app',
             applicationIcon: new Icon(Icons.info),
