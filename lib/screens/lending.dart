@@ -38,7 +38,7 @@ class Lending extends StatelessWidget {
 
             ),
             new ListTile(
-              leading: const Icon(Icons.person),
+              leading: const Icon(Icons.content_cut),
               title: new TextField(
                 decoration: new InputDecoration(
                   hintText: "Name",
