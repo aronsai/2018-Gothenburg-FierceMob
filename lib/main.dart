@@ -148,6 +148,7 @@ class TabsState extends State<Tabs> {
         onTap: onTap,
         items: TabItems.map((TabItem) {
           return new BottomNavigationBarItem(
+            backgroundColor: Colors.lightGreen,
             title: new Text(TabItem.title),
             icon: new Icon(TabItem.icon),
           );
