@@ -187,14 +187,7 @@ class TabsState extends State<Tabs> {
               Navigator.of(context).pushNamed('/support');
             }
           ),
-          new ListTile(
-              leading: new Icon(Icons.gavel),
-              title: new Text('Borrow'),
-              onTap: () {
-                Navigator.pop(context);
-                Navigator.of(context).pushNamed('/borrow');
-              }
-          ),
+          
           new Divider(),
           new ListTile(
             leading: new Icon(Icons.exit_to_app),
