@@ -29,8 +29,7 @@ class Lending extends StatelessWidget {
             const Divider(
               height: 4.0,
             ),
-            new Text
-              ("Please specify what you want to lend",
+            new Text("Please specify what you want to lend",
               style: new TextStyle(
                 //fontWeight: FontWeight.bold,
                 fontSize: 40.0,
@@ -70,14 +69,10 @@ class Lending extends StatelessWidget {
               title: const Text('Nick'),
               subtitle: const Text('None'),
             ),
+
             new ListTile(
-              leading: const Icon(Icons.today),
-              title: const Text('Birthday'),
-              subtitle: const Text('February 20, 1980'),
-            ),
-            new ListTile(
-              leading: const Icon(Icons.group),
-              title: const Text('Contact group'),
+              leading: const Icon(Icons.content_cut),
+              title: const Text('Tool-group'),
               subtitle: const Text('Not specified'),
             )
           ],
