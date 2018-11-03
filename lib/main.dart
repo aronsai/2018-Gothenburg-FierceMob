@@ -257,6 +257,10 @@ class TabsState extends State<Tabs> {
       case 2:
         this._title_app = TabItems[2].title;
       break;
+
+      case 3:
+        this._title_app = TabItems[3].title;
+        break;
     }
   }
 }

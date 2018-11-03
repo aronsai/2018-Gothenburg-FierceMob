@@ -40,6 +40,10 @@ flutter:
   assets:
     - lib/src/images/logo.png
     - lib/src/images/powerdrill.jpg
+    - lib/src/images/chainsaw.jpg
+    - lib/src/images/casio.jpg
+    - lib/src/images/lawnmower.jpg
+    - lib/src/images/vacuumcleaner.jpg
   #  - images/a_dot_burr.jpeg
   #  - images/a_dot_ham.jpeg
 
