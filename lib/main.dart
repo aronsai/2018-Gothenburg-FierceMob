@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 
 import './screens/about.dart' as _aboutPage;
 import './screens/support.dart' as _supportPage;
-import './tabs/dashboard.dart' as _secondTab;
+import './tabs/borrower.dart' as _secondTab;
 import './tabs/home.dart' as _firstTab;
 import './tabs/settings.dart' as _thirdTab;
 
@@ -118,7 +118,7 @@ class TabsState extends State<Tabs> {
       onPageChanged: onTabChanged,
       children: <Widget>[
         new _firstTab.Home(),
-        new _secondTab.Dashboard(),
+        new _secondTab.Borrower(),
         new _thirdTab.Settings()
       ],
     ),
@@ -225,7 +225,7 @@ class TabItem {
 }
 
 const List<TabItem> TabItems = const <TabItem>[
-  const TabItem(title: 'Dashboard', icon: Icons.dashboard),
+  const TabItem(title: 'Borrow', icon: Icons.dashboard),
   const TabItem(title: 'Home', icon: Icons.nature_people),
   const TabItem(title: 'Settings', icon: Icons.settings)
 ];

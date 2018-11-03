@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-class Dashboard extends StatelessWidget {
+class Borrower extends StatelessWidget {
   @override
   Widget build(BuildContext context) => new Container(
       child: new ListView(
