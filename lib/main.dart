@@ -234,7 +234,7 @@ class TabItem {
 }
 
 const List<TabItem> TabItems = const <TabItem>[
-  const TabItem(title: 'Borrow', icon: Icons.home),
+  const TabItem(title: 'Borrow', icon: Icons.gavel),
   const TabItem(title: 'Home', icon: Icons.dashboard),
   const TabItem(title: 'Settings', icon: Icons.settings),
   const TabItem(title: 'Profile', icon: Icons.face)
