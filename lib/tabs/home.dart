@@ -7,6 +7,7 @@ class Home extends StatelessWidget {
       crossAxisAlignment: CrossAxisAlignment.center,
       mainAxisAlignment: MainAxisAlignment.spaceEvenly,
       children: <Widget>[
+
         new Icon(
           Icons.home,
           size: 150.0,
