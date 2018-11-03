@@ -41,6 +41,7 @@ flutter:
     - lib/src/images/logo.png
     - lib/src/images/powerdrill.jpg
     - lib/src/images/chainsaw.jpg
+    - lib/src/images/casio.jpg
   #  - images/a_dot_burr.jpeg
   #  - images/a_dot_ham.jpeg
 
