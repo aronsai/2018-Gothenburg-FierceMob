@@ -7,13 +7,14 @@ import './screens/support.dart' as _supportPage;
 import './tabs/borrower.dart' as _firstTab;
 import './tabs/home.dart' as _secondTab;
 import './tabs/settings.dart' as _thirdTab;
+import './tabs/Profile.dart' as _fourthTab;
 
 void main() => runApp(new MaterialApp(
   title: 'fiercemob sharing app',
   theme: new ThemeData(
       primarySwatch: Colors.lightGreen,
     scaffoldBackgroundColor: Colors.white,
-      primaryColor: Colors.lightGreen, backgroundColor: Colors.white
+      primaryColor: Colors.lightGreen, backgroundColor: Colors.blueGrey
   ),
   home: new Tabs(),
   onGenerateRoute: (RouteSettings settings) {
@@ -124,7 +125,8 @@ class TabsState extends State<Tabs> {
       children: <Widget>[
         new _firstTab.Borrower(),
         new _secondTab.Home(),
-        new _thirdTab.Settings()
+        new _thirdTab.Settings(),
+        new _fourthTab.Profile()
       ],
     ),
 
@@ -161,7 +163,7 @@ class TabsState extends State<Tabs> {
             child: new DrawerHeader(
               padding: new EdgeInsets.all(0.0),
               decoration: new BoxDecoration(
-                color: new Color(0xFFECEFF1),
+                color: new Color(0xFFFFEFF1),
               ),
               child: new Center(
                 child: new Image.asset(
@@ -238,7 +240,8 @@ class TabItem {
 }
 
 const List<TabItem> TabItems = const <TabItem>[
-  const TabItem(title: 'Borrow', icon: Icons.dashboard),
-  const TabItem(title: 'Home', icon: Icons.nature_people),
-  const TabItem(title: 'Settings', icon: Icons.settings)
+  const TabItem(title: 'Borrow', icon: Icons.home),
+  const TabItem(title: 'Home', icon: Icons.dashboard),
+  const TabItem(title: 'Settings', icon: Icons.settings),
+  const TabItem(title: 'Profile', icon: Icons.face)
 ];
