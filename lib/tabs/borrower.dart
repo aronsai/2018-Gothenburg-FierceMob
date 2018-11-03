@@ -52,16 +52,16 @@ class Borrower extends StatelessWidget {
                           'Göran', context, 'lib/src/images/powerdrill.jpg'),
                       createItem('DEWALT DC759KA',
                           'My power drill! It works great for everyday stuff.',
-                          'Göran', context, 'lib/src/images/powerdrill.jpg'),
+                          'Göran', context),
                       createItem('DEWALT DC759KA',
                           'My power drill! It works great for everyday stuff.',
-                          'Göran', context, 'lib/src/images/powerdrill.jpg'),
+                          'Göran', context),
                       createItem('DEWALT DC759KA',
                           'My power drill! It works great for everyday stuff.',
-                          'Göran', context, 'lib/src/images/powerdrill.jpg'),
+                          'Göran', context),
                       createItem('DEWALT DC759KA',
                           'My power drill! It works great for everyday stuff.',
-                          'Göran', context, 'lib/src/images/powerdrill.jpg'),
+                          'Göran', context),
                     ],
                   )
               )
@@ -71,14 +71,14 @@ class Borrower extends StatelessWidget {
       );
 
   Card createItem(String title, String subtitle, String owner,
-      BuildContext context, String imageurl) {
+      BuildContext context) {
     Card item = new Card(
       child: Column(
         mainAxisSize: MainAxisSize.min,
         children: <Widget>[
           ListTile(
             leading: new CircleAvatar(
-                child: new Image.asset(imageurl)
+                child: new Image.asset('lib/src/images/powerdrill.jpg')
             ),
             title: Text(title),
             subtitle: Text(
