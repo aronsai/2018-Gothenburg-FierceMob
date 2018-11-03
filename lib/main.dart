@@ -3,8 +3,8 @@ import 'package:flutter/material.dart';
 
 import './screens/about.dart' as _aboutPage;
 import './screens/support.dart' as _supportPage;
-import './tabs/dashboard.dart' as _secondTab;
-import './tabs/home.dart' as _firstTab;
+import './tabs/borrower.dart' as _firstTab;
+import './tabs/home.dart' as _secondTab;
 import './tabs/settings.dart' as _thirdTab;
 import './tabs/Profile.dart' as _fourthTab;
 
@@ -118,8 +118,8 @@ class TabsState extends State<Tabs> {
       controller: _tabController,
       onPageChanged: onTabChanged,
       children: <Widget>[
-        new _firstTab.Home(),
-        new _secondTab.Dashboard(),
+        new _firstTab.Borrower(),
+        new _secondTab.Home(),
         new _thirdTab.Settings(),
         new _fourthTab.Profile()
       ],
@@ -227,8 +227,8 @@ class TabItem {
 }
 
 const List<TabItem> TabItems = const <TabItem>[
-  const TabItem(title: 'Home', icon: Icons.home),
-  const TabItem(title: 'Dashboard', icon: Icons.dashboard),
+  const TabItem(title: 'Borrow', icon: Icons.home),
+  const TabItem(title: 'Home', icon: Icons.dashboard),
   const TabItem(title: 'Settings', icon: Icons.settings),
   const TabItem(title: 'Profile', icon: Icons.face)
 ];
