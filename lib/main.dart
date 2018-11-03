@@ -174,14 +174,6 @@ class TabsState extends State<Tabs> {
               Navigator.of(context).pushNamed('/support');
             }
           ),
-          new ListTile(
-            leading: new Icon(Icons.info),
-            title: new Text('About'),
-            onTap: () {
-              Navigator.pop(context);
-              Navigator.of(context).pushNamed('/about');
-            }
-          ),
           new Divider(),
           new ListTile(
             leading: new Icon(Icons.exit_to_app),
@@ -189,6 +181,12 @@ class TabsState extends State<Tabs> {
             onTap: () {
               Navigator.pop(context);
             }
+          ),
+          AboutListTile(
+            applicationName: 'Team fiercemob\'s sharing app',
+            applicationIcon: new Icon(Icons.info),
+            applicationVersion: '0.1',
+            applicationLegalese: 'Developed during Openhack Gothenburg 2018. Team: Aron Sai, Ara Jafarzadeh, Mahmoud Hurria, Aswin Kumar Nagajaran, Martynas Lekeckas, Moritz Denke',
           ),
         ],
       )
