@@ -2,43 +2,117 @@ import 'package:flutter/material.dart';
 
 class Lending extends StatelessWidget {
   @override
-  Widget build (BuildContext context) => new Scaffold(
+  Widget build(BuildContext context) =>
+      new Scaffold(
 
-    //App Bar
-    appBar: new AppBar(
-      title: new Text(
-        'Lending',
-        style: new TextStyle(
-          fontSize: Theme.of(context).platform == TargetPlatform.iOS ? 17.0 : 20.0,
+
+        //App Bar
+        appBar: new AppBar(
+          title: new Text(
+            'Lending',
+            style: new TextStyle(
+              fontSize: Theme
+                  .of(context)
+                  .platform == TargetPlatform.iOS ? 17.0 : 20.0,
+            ),
+          ),
+          elevation: Theme
+              .of(context)
+              .platform == TargetPlatform.iOS ? 0.0 : 4.0,
         ),
-      ),
-      elevation: Theme.of(context).platform == TargetPlatform.iOS ? 0.0 : 4.0,
-    ),
 
-    //Content of tabs
+        //Content of tabs
 
 
-
-    body: new PageView(
-
-      children: <Widget>[
-        new RaisedButton(
-          child: const Text('See your items'),
-          color: Theme.of(context).accentColor,
-          elevation: 4.0,
-
-          splashColor: Colors.orange,
-          onPressed: () {
-            // Perform some action
-          },
-        ),
-        new Column(
-          mainAxisAlignment: MainAxisAlignment.center,
+        body: new Column(
+          //mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+          crossAxisAlignment: CrossAxisAlignment.center,
           children: <Widget>[
-            new Text('Lending page content'),
+
+            const Divider(
+              height: 30.0,
+            ),
+            new Text("Please specify what you want to lend",
+              style: new TextStyle(
+                fontWeight: FontWeight.bold,
+                fontSize: 23.0,
+
+                fontFamily: 'Roboto',
+              ),
+            ),
+            const Divider(
+              height: 20.0,
+            ),
+            new ListTile(
+              leading: const Icon(Icons.content_cut),
+              title: new TextField(
+                decoration: new InputDecoration(
+                  hintText: "Name of your device",
+                ),
+              ),
+            ),
+            const Divider(
+              height: 20.0,
+            ),
+            new ListTile(
+              leading: const Icon(Icons.euro_symbol),
+              title: new TextField(
+                decoration: new InputDecoration(
+                  hintText: "Price",
+                ),
+              ),
+            ),
+            const Divider(
+              height: 20.0,
+            ),
+            new ListTile(
+              leading: const Icon(Icons.format_list_numbered),
+              title: new TextField(
+                decoration: new InputDecoration(
+                  hintText: "Points for device",
+                ),
+              ),
+            ),
+            const Divider(
+              height: 20.0,
+            ),
+            new ListTile(
+              leading: const Icon(Icons.content_cut),
+              title: const Text('Tool-group'),
+              subtitle: const Text('Not specified'),
+            ),
+            const Divider(
+              height: 220.0,
+            ),
+            new FloatingActionButton(
+                elevation: 0.0,
+                child: new Icon(Icons.check),
+                backgroundColor: Colors.lightGreen,
+                onPressed: (){}
+            ),
+          ],
+        ),
+
+      )
+
+      ;
+
+  Widget build2(BuildContext context) => new Scaffold(
+    body: new Column(
+      children: <Widget>[
+        new Stack(
+          alignment: new FractionalOffset(0.5, 1.0),
+          children: <Widget>[
+            new FloatingActionButton(
+                elevation: 0.0,
+                child: new Icon(Icons.check),
+                backgroundColor: new Color(0xFFE57373),
+                onPressed: (){}
+            )
           ],
         )
       ],
     ),
   );
+
 }
