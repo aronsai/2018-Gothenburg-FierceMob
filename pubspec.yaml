@@ -45,6 +45,7 @@ flutter:
     - lib/src/images/lawnmower.jpg
     - lib/src/images/vacuumcleaner.jpg
     - lib/src/images/skis.jpg
+    - lib/src/images/tent.jpg
   #  - images/a_dot_burr.jpeg
   #  - images/a_dot_ham.jpeg
 

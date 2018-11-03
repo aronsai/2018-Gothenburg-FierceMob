@@ -26,11 +26,8 @@ class Home extends StatelessWidget {
               padding: const EdgeInsets.all(20.0),
               child: new Column(
                 children: <Widget>[
-                  createItem('DEWALT DC759KA',
-                      'My power drill! It works great for everyday stuff.',
-                      'Göran', context),
-                  createItem('DEWALT DC759KA',
-                      'My power drill! It works great for everyday stuff.',
+                  createItem('Dome-Tent',
+                      'My old tent.',
                       'Göran', context),
                   FlatButton.icon(onPressed: () {
                     Navigator.of(context).pushNamed('/lending');
@@ -54,7 +51,7 @@ class Home extends StatelessWidget {
         children: <Widget>[
           ListTile(
             leading: new CircleAvatar(
-                child: new Image.asset('lib/src/images/powerdrill.jpg')
+                child: new Image.asset('lib/src/images/tent.jpg')
             ),
             title: Text(title),
             subtitle: Text(
