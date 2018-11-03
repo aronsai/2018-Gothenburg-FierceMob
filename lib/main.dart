@@ -1,19 +1,19 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
-import './screens/lending.dart' as _lendingPage;
 import './screens/about.dart' as _aboutPage;
+import './screens/lending.dart' as _lendingPage;
 import './screens/support.dart' as _supportPage;
+import './tabs/Profile.dart' as _fourthTab;
 import './tabs/borrower.dart' as _firstTab;
 import './tabs/home.dart' as _secondTab;
 import './tabs/settings.dart' as _thirdTab;
-import './tabs/Profile.dart' as _fourthTab;
 
 void main() => runApp(new MaterialApp(
   title: 'fiercemob sharing app',
   theme: new ThemeData(
       primarySwatch: Colors.lightGreen,
-    scaffoldBackgroundColor: Colors.white,
+      scaffoldBackgroundColor: Colors.white,
       primaryColor: Colors.lightGreen, backgroundColor: Colors.blueGrey
   ),
   home: new Tabs(),

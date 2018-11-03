@@ -14,7 +14,7 @@
           ),
           new Container(
             child: new Icon(Icons.star,
-            size: 10,
+              size: 10.0,
             color: Colors.yellowAccent,
           ),
           ),

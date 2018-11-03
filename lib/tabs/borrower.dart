@@ -1,18 +1,43 @@
 import 'package:flutter/material.dart';
 
-enum Category { tools }
+enum Category { tools, all }
 
 class Borrower extends StatelessWidget {
   @override
   Widget build(BuildContext context) => new Container(
       child: new Column(
         children: <Widget>[
-          new Row(
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: <Widget>[
-              new Text('Categories'),
-              CategorySelector()
-            ],
+          Padding(
+            padding: const EdgeInsets.all(20.0),
+            child: new Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: <Widget>[
+                new FlatButton.icon(onPressed: () {
+                  showDialog(
+                    context: context,
+                    builder: (BuildContext context) {
+                      return SimpleDialog(
+                        children: <Widget>[
+                          Padding(
+                            padding: const EdgeInsets.all(20.0),
+                            child: TextField(
+                              decoration: InputDecoration(
+                                  border: OutlineInputBorder(),
+                                  hintText: 'Search'
+                              ),
+                            ),
+                          ),
+                          FlatButton(onPressed: () {}, child: Text("Go"))
+                        ],
+                      );
+                    },
+                  );
+                },
+                    icon: Icon(Icons.search),
+                    label: Text("Search")),
+                CategorySelector()
+              ],
+            ),
           ),
           new ListView(
             shrinkWrap: true,
@@ -63,22 +88,25 @@ class CategorySelector extends StatefulWidget {
 }
 
 class _CategorySelectorState extends State<CategorySelector> {
-  Category _selection;
+  Category _selection = Category.all;
 
   @override
   Widget build(BuildContext context) {
-    return new PopupMenuButton<Category>(
-      icon: Icon(Icons.filter_list),
-      onSelected: (Category result) {
+    return new DropdownButton<Category>(
+      value: _selection,
+      onChanged: (Category result) {
         setState(() {
           _selection = result;
         });
       },
-      itemBuilder: (BuildContext context) =>
-      <PopupMenuEntry<Category>>[
-        const CheckedPopupMenuItem<Category>(
+      items: <DropdownMenuItem<Category>>[
+        const DropdownMenuItem(
           value: Category.tools,
           child: Text('Tools'),
+        ),
+        const DropdownMenuItem(
+          value: Category.all,
+          child: Text('All categories'),
         )
       ],
     );

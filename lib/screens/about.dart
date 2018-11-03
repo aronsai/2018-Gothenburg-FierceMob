@@ -19,9 +19,13 @@ class About extends StatelessWidget {
     body: new PageView(
       children: <Widget>[
         new Column(
-          mainAxisAlignment: MainAxisAlignment.center,
+          mainAxisAlignment: MainAxisAlignment.start,
           children: <Widget>[
-            new Text('About page content')
+            AboutListTile(
+              applicationName: 'Team fiercemob\'s sharing app',
+              applicationVersion: '0.1',
+              applicationLegalese: 'Developed during Openhack Gothenburg 2018. Team: Aron Sai, Ara Jafarzadeh, Mahmoud Hurria, Aswin Kumar Nagajaran, Martynas Lekeckas, Moritz Denke',
+            )
           ],
         )
       ],
