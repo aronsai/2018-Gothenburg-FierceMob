@@ -4,8 +4,6 @@ class Lending extends StatelessWidget {
   @override
   Widget build(BuildContext context) =>
       new Scaffold(
-
-
         //App Bar
         appBar: new AppBar(
           title: new Text(
