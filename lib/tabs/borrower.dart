@@ -24,7 +24,7 @@ class Borrower extends StatelessWidget {
                   children: <Widget>[
                     ListTile(
                       leading: new CircleAvatar(
-                          child: new Image.asset('lib/src/powerdrill.jpg')
+                          child: new Image.asset('lib/src/images/powerdrill.jpg')
                       ),
                       title: Text('DEWALT DC759KA'),
                       subtitle: Text(
