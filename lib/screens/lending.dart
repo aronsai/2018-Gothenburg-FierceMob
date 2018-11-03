@@ -25,14 +25,18 @@ class Lending extends StatelessWidget {
 
 
         body: new Column(
+          //mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+          crossAxisAlignment: CrossAxisAlignment.center,
           children: <Widget>[
+
             const Divider(
-              height: 10.0,
+              height: 30.0,
             ),
             new Text("Please specify what you want to lend",
               style: new TextStyle(
-                //fontWeight: FontWeight.bold,
-                fontSize: 40.0,
+                fontWeight: FontWeight.bold,
+                fontSize: 23.0,
+
                 fontFamily: 'Roboto',
               ),
             ),
@@ -76,10 +80,39 @@ class Lending extends StatelessWidget {
               leading: const Icon(Icons.content_cut),
               title: const Text('Tool-group'),
               subtitle: const Text('Not specified'),
-            )
+            ),
+            const Divider(
+              height: 220.0,
+            ),
+            new FloatingActionButton(
+                elevation: 0.0,
+                child: new Icon(Icons.check),
+                backgroundColor: Colors.lightGreen,
+                onPressed: (){}
+            ),
           ],
         ),
 
       )
+
       ;
+
+  Widget build2(BuildContext context) => new Scaffold(
+    body: new Column(
+      children: <Widget>[
+        new Stack(
+          alignment: new FractionalOffset(0.5, 1.0),
+          children: <Widget>[
+            new FloatingActionButton(
+                elevation: 0.0,
+                child: new Icon(Icons.check),
+                backgroundColor: new Color(0xFFE57373),
+                onPressed: (){}
+            )
+          ],
+        )
+      ],
+    ),
+  );
+
 }
