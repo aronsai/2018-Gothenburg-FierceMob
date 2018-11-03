@@ -35,10 +35,9 @@ class Lending extends StatelessWidget {
                 fontSize: 40.0,
                 fontFamily: 'Roboto',
               ),
-
             ),
             const Divider(
-              height: 4.0,
+              height: 20.0,
             ),
             new ListTile(
               leading: const Icon(Icons.content_cut),
@@ -48,6 +47,9 @@ class Lending extends StatelessWidget {
                 ),
               ),
             ),
+            const Divider(
+              height: 20.0,
+            ),
             new ListTile(
               leading: const Icon(Icons.euro_symbol),
               title: new TextField(
@@ -55,6 +57,9 @@ class Lending extends StatelessWidget {
                   hintText: "Price",
                 ),
               ),
+            ),
+            const Divider(
+              height: 20.0,
             ),
             new ListTile(
               leading: const Icon(Icons.format_list_numbered),
@@ -65,7 +70,7 @@ class Lending extends StatelessWidget {
               ),
             ),
             const Divider(
-              height: 1.0,
+              height: 20.0,
             ),
             new ListTile(
               leading: const Icon(Icons.content_cut),
@@ -74,6 +79,7 @@ class Lending extends StatelessWidget {
             )
           ],
         ),
+
       )
       ;
 }
