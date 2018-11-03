@@ -1,17 +1,18 @@
-import 'package:flutter/material.dart';
 import 'package:flutter/cupertino.dart';
-import './tabs/home.dart' as _firstTab;
-import './tabs/dashboard.dart' as _secondTab;
-import './tabs/settings.dart' as _thirdTab;
+import 'package:flutter/material.dart';
+
 import './screens/about.dart' as _aboutPage;
 import './screens/support.dart' as _supportPage;
+import './tabs/dashboard.dart' as _secondTab;
+import './tabs/home.dart' as _firstTab;
+import './tabs/settings.dart' as _thirdTab;
 
 void main() => runApp(new MaterialApp(
-  title: 'Flutter Starter',
+  title: 'fiercemob sharing app',
   theme: new ThemeData(
-    primarySwatch: Colors.blueGrey,
+      primarySwatch: Colors.lightGreen,
     scaffoldBackgroundColor: Colors.white,
-    primaryColor: Colors.blueGrey, backgroundColor: Colors.white
+      primaryColor: Colors.lightGreen, backgroundColor: Colors.white
   ),
   home: new Tabs(),
   onGenerateRoute: (RouteSettings settings) {
@@ -158,9 +159,9 @@ class TabsState extends State<Tabs> {
                 color: new Color(0xFFECEFF1),
               ),
               child: new Center(
-                child: new FlutterLogo(
-                  colors: Colors.blueGrey,
-                  size: 54.0,
+                child: new Image.asset(
+                    'lib/src/logo.png',
+                    width: 250.0
                 ),
               ),
             ),
