@@ -1,43 +1,18 @@
 import 'package:flutter/material.dart';
 
-enum Category { tools, all }
+enum Category { tools }
 
 class Borrower extends StatelessWidget {
   @override
   Widget build(BuildContext context) => new Container(
       child: new Column(
         children: <Widget>[
-          Padding(
-            padding: const EdgeInsets.all(20.0),
-            child: new Row(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: <Widget>[
-                new FlatButton.icon(onPressed: () {
-                  showDialog(
-                    context: context,
-                    builder: (BuildContext context) {
-                      return SimpleDialog(
-                        children: <Widget>[
-                          Padding(
-                            padding: const EdgeInsets.all(20.0),
-                            child: TextField(
-                              decoration: InputDecoration(
-                                  border: OutlineInputBorder(),
-                                  hintText: 'Search'
-                              ),
-                            ),
-                          ),
-                          FlatButton(onPressed: () {}, child: Text("Go"))
-                        ],
-                      );
-                    },
-                  );
-                },
-                    icon: Icon(Icons.search),
-                    label: Text("Search")),
-                CategorySelector()
-              ],
-            ),
+          new Row(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: <Widget>[
+              new Text('Categories'),
+              CategorySelector()
+            ],
           ),
           new ListView(
             shrinkWrap: true,
@@ -62,6 +37,9 @@ class Borrower extends StatelessWidget {
                           FlatButton(
                             child: const Text('Borrow it!'),
                             onPressed: () {
+                              Navigator.pop(context);
+                              Navigator.of(context).pushNamed('/lending');
+
                               /* ... */
                             },
                           ),
@@ -75,8 +53,11 @@ class Borrower extends StatelessWidget {
           )
         ],
       )
+
   );
 }
+
+
 
 class CategorySelector extends StatefulWidget {
   @override
@@ -84,25 +65,22 @@ class CategorySelector extends StatefulWidget {
 }
 
 class _CategorySelectorState extends State<CategorySelector> {
-  Category _selection = Category.all;
+  Category _selection;
 
   @override
   Widget build(BuildContext context) {
-    return new DropdownButton<Category>(
-      value: _selection,
-      onChanged: (Category result) {
+    return new PopupMenuButton<Category>(
+      icon: Icon(Icons.filter_list),
+      onSelected: (Category result) {
         setState(() {
           _selection = result;
         });
       },
-      items: <DropdownMenuItem<Category>>[
-        const DropdownMenuItem(
+      itemBuilder: (BuildContext context) =>
+      <PopupMenuEntry<Category>>[
+        const CheckedPopupMenuItem<Category>(
           value: Category.tools,
           child: Text('Tools'),
-        ),
-        const DropdownMenuItem(
-          value: Category.all,
-          child: Text('All categories'),
         )
       ],
     );

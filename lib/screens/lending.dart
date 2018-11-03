@@ -88,7 +88,8 @@ class Lending extends StatelessWidget {
                 elevation: 0.0,
                 child: new Icon(Icons.check),
                 backgroundColor: Colors.lightGreen,
-                onPressed: (){}
+                onPressed: (){Navigator.pop(context);
+                Navigator.of(context).pushNamed('/main');}
             ),
           ],
         ),
@@ -96,23 +97,5 @@ class Lending extends StatelessWidget {
       )
 
       ;
-
-  Widget build2(BuildContext context) => new Scaffold(
-    body: new Column(
-      children: <Widget>[
-        new Stack(
-          alignment: new FractionalOffset(0.5, 1.0),
-          children: <Widget>[
-            new FloatingActionButton(
-                elevation: 0.0,
-                child: new Icon(Icons.check),
-                backgroundColor: new Color(0xFFE57373),
-                onPressed: (){}
-            )
-          ],
-        )
-      ],
-    ),
-  );
 
 }
