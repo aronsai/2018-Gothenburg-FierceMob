@@ -78,7 +78,7 @@ class Borrower extends StatelessWidget {
         children: <Widget>[
           ListTile(
             leading: new CircleAvatar(
-                child: new Image.asset('lib/src/powerdrill.jpg')
+                child: new Image.asset('lib/src/images/powerdrill.jpg')
             ),
             title: Text(title),
             subtitle: Text(
@@ -107,9 +107,6 @@ class Borrower extends StatelessWidget {
     return item;
   }
 }
-}
-
-
 
 
 class CategorySelector extends StatefulWidget {
