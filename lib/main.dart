@@ -1,14 +1,14 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
-import './screens/lending.dart' as _lendingPage;
-import './screens/borrow.dart' as _borrowPage;
 import './screens/about.dart' as _aboutPage;
+import './screens/borrow.dart' as _borrowPage;
+import './screens/lending.dart' as _lendingPage;
 import './screens/support.dart' as _supportPage;
+import './tabs/Profile.dart' as _fourthTab;
 import './tabs/borrower.dart' as _firstTab;
 import './tabs/home.dart' as _secondTab;
 import './tabs/settings.dart' as _thirdTab;
-import './tabs/Profile.dart' as _fourthTab;
 
 void main() => runApp(new MaterialApp(
   title: 'fiercemob sharing app',
@@ -153,6 +153,7 @@ class TabsState extends State<Tabs> {
         onTap: onTap,
         items: TabItems.map((TabItem) {
           return new BottomNavigationBarItem(
+            backgroundColor: Colors.lightGreen,
             title: new Text(TabItem.title),
             icon: new Icon(TabItem.icon),
           );
