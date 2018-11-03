@@ -2,43 +2,86 @@ import 'package:flutter/material.dart';
 
 class Lending extends StatelessWidget {
   @override
-  Widget build (BuildContext context) => new Scaffold(
+  Widget build(BuildContext context) =>
+      new Scaffold(
 
-    //App Bar
-    appBar: new AppBar(
-      title: new Text(
-        'Lending',
-        style: new TextStyle(
-          fontSize: Theme.of(context).platform == TargetPlatform.iOS ? 17.0 : 20.0,
+
+        //App Bar
+        appBar: new AppBar(
+          title: new Text(
+            'Lending',
+            style: new TextStyle(
+              fontSize: Theme
+                  .of(context)
+                  .platform == TargetPlatform.iOS ? 17.0 : 20.0,
+            ),
+          ),
+          elevation: Theme
+              .of(context)
+              .platform == TargetPlatform.iOS ? 0.0 : 4.0,
         ),
-      ),
-      elevation: Theme.of(context).platform == TargetPlatform.iOS ? 0.0 : 4.0,
-    ),
 
-    //Content of tabs
+        //Content of tabs
 
 
-
-    body: new PageView(
-
-      children: <Widget>[
-        new RaisedButton(
-          child: const Text('See your items'),
-          color: Theme.of(context).accentColor,
-          elevation: 4.0,
-
-          splashColor: Colors.orange,
-          onPressed: () {
-            // Perform some action
-          },
-        ),
-        new Column(
-          mainAxisAlignment: MainAxisAlignment.center,
+        body: new Column(
           children: <Widget>[
-            new Text('Lending page content'),
+            const Divider(
+              height: 4.0,
+            ),
+            new Text
+              ("Please specify what you want to lend",
+              style: new TextStyle(
+                //fontWeight: FontWeight.bold,
+                fontSize: 40.0,
+                fontFamily: 'Roboto',
+              ),
+
+            ),
+            new ListTile(
+              leading: const Icon(Icons.person),
+              title: new TextField(
+                decoration: new InputDecoration(
+                  hintText: "Name",
+                ),
+              ),
+            ),
+            new ListTile(
+              leading: const Icon(Icons.phone),
+              title: new TextField(
+                decoration: new InputDecoration(
+                  hintText: "Phone",
+                ),
+              ),
+            ),
+            new ListTile(
+              leading: const Icon(Icons.email),
+              title: new TextField(
+                decoration: new InputDecoration(
+                  hintText: "Email",
+                ),
+              ),
+            ),
+            const Divider(
+              height: 1.0,
+            ),
+            new ListTile(
+              leading: const Icon(Icons.label),
+              title: const Text('Nick'),
+              subtitle: const Text('None'),
+            ),
+            new ListTile(
+              leading: const Icon(Icons.today),
+              title: const Text('Birthday'),
+              subtitle: const Text('February 20, 1980'),
+            ),
+            new ListTile(
+              leading: const Icon(Icons.group),
+              title: const Text('Contact group'),
+              subtitle: const Text('Not specified'),
+            )
           ],
-        )
-      ],
-    ),
-  );
+        ),
+      )
+      ;
 }
