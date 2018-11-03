@@ -2,17 +2,18 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 import './screens/about.dart' as _aboutPage;
+import './screens/lending.dart' as _lendingPage;
 import './screens/support.dart' as _supportPage;
+import './tabs/Profile.dart' as _fourthTab;
 import './tabs/borrower.dart' as _firstTab;
 import './tabs/home.dart' as _secondTab;
 import './tabs/settings.dart' as _thirdTab;
-import './tabs/Profile.dart' as _fourthTab;
 
 void main() => runApp(new MaterialApp(
   title: 'fiercemob sharing app',
   theme: new ThemeData(
       primarySwatch: Colors.lightGreen,
-    scaffoldBackgroundColor: Colors.white,
+      scaffoldBackgroundColor: Colors.white,
       primaryColor: Colors.lightGreen, backgroundColor: Colors.blueGrey
   ),
   home: new Tabs(),
@@ -24,6 +25,10 @@ void main() => runApp(new MaterialApp(
       );
       case '/support': return new FromRightToLeft(
         builder: (_) => new _supportPage.Support(),
+        settings: settings,
+      );
+      case '/lending': return new FromRightToLeft(
+        builder: (_) => new _lendingPage.Lending(),
         settings: settings,
       );
     }
@@ -176,14 +181,15 @@ class TabsState extends State<Tabs> {
               Navigator.of(context).pushNamed('/support');
             }
           ),
-          new Divider(),
           new ListTile(
-            leading: new Icon(Icons.exit_to_app),
-            title: new Text('Sign Out'),
-            onTap: () {
-              Navigator.pop(context);
-            }
+              leading: new Icon(Icons.forward),
+              title: new Text('Lending'),
+              onTap: () {
+                Navigator.pop(context);
+                Navigator.of(context).pushNamed('/lending');
+              }
           ),
+
           AboutListTile(
             applicationName: 'Team fiercemob\'s sharing app',
             applicationIcon: new Icon(Icons.info),

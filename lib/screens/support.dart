@@ -16,7 +16,11 @@ class Support extends StatelessWidget {
     ),
 
     //Content of tabs
+
+
+
     body: new PageView(
+
       children: <Widget>[
         new Column(
           mainAxisAlignment: MainAxisAlignment.center,
