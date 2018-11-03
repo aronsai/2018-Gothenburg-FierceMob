@@ -1,6 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
+import './screens/lending.dart' as _lendingPage;
 import './screens/about.dart' as _aboutPage;
 import './screens/support.dart' as _supportPage;
 import './tabs/borrower.dart' as _secondTab;
@@ -23,6 +24,10 @@ void main() => runApp(new MaterialApp(
       );
       case '/support': return new FromRightToLeft(
         builder: (_) => new _supportPage.Support(),
+        settings: settings,
+      );
+      case '/lending': return new FromRightToLeft(
+        builder: (_) => new _lendingPage.Lending(),
         settings: settings,
       );
     }
@@ -173,6 +178,14 @@ class TabsState extends State<Tabs> {
               Navigator.pop(context);
               Navigator.of(context).pushNamed('/support');
             }
+          ),
+          new ListTile(
+              leading: new Icon(Icons.chat),
+              title: new Text('Lending'),
+              onTap: () {
+                Navigator.pop(context);
+                Navigator.of(context).pushNamed('/lending');
+              }
           ),
           new Divider(),
           new ListTile(
