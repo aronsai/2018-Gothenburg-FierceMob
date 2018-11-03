@@ -40,16 +40,6 @@ class Settings extends StatelessWidget {
               title: const Text('Help', style: TextStyle(fontWeight: FontWeight.bold))
               ,
             ),
-            const Divider(
-              height: 220.0,
-            ),
-            new FloatingActionButton(
-                elevation: 0.0,
-                child: new Icon(Icons.check),
-                backgroundColor: Colors.lightGreen,
-                onPressed: (){Navigator.pop(context);
-                Navigator.of(context).pushNamed('/main');}
-            ),
           ],
         ),
 
