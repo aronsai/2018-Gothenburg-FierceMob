@@ -19,7 +19,7 @@ class Profile extends StatelessWidget {
             new FittedBox(
               child: new Text('John Johnson\n',style: TextStyle(
                 fontWeight: FontWeight.bold,
-                fontSize: 16.0,
+                fontSize: 26.0,
               ),
               ),
             ),
@@ -27,7 +27,7 @@ class Profile extends StatelessWidget {
               children: <Widget>[
                 new Icon(
                   Icons.star,
-                  size: 10.0,
+                  size: 28.0,
                   color: Colors.orangeAccent,
                 ),
                 new Text('4.5'),
@@ -37,7 +37,7 @@ class Profile extends StatelessWidget {
         ),
         new Column(
           children: <Widget>[
-            new Text( 'Borrowed and lent items',style: TextStyle(fontSize: 16.0, fontWeight: FontWeight.bold),),
+            new Text( 'Borrowed and lent items',style: TextStyle(fontSize: 20.0, fontWeight: FontWeight.bold),),
             new Divider(),
             new Row(
               crossAxisAlignment: CrossAxisAlignment.center,
@@ -76,6 +76,19 @@ class Profile extends StatelessWidget {
                   children: [
                     new Text('Stars : 1.0/5.0'),
                     new Text('Type : Lent'),
+                  ],
+                )
+              ],
+            ),
+            new Divider(),
+            new Row(
+              crossAxisAlignment: CrossAxisAlignment.center,
+              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+              children: <Widget>[
+                new Text('Total Star Count',textScaleFactor: 1.8),
+                new Column(
+                  children: [
+                    new Text('235',textScaleFactor: 2.0),
                   ],
                 )
               ],
