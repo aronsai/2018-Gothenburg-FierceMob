@@ -63,7 +63,7 @@ class Borrower extends StatelessWidget {
                             child: const Text('Borrow it!'),
                             onPressed: () {
                               Navigator.pop(context);
-                              Navigator.of(context).pushNamed('/lending');
+                              Navigator.of(context).pushNamed('/borrow');
 
                               /* ... */
                             },

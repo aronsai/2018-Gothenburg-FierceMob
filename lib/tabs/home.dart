@@ -31,7 +31,7 @@ class Home extends StatelessWidget {
                   subtitle: Text(
                       'DEWALT DC759KA - has to be returned in 2 days'),
                 ),
-                
+
               ],
             ),
           )
