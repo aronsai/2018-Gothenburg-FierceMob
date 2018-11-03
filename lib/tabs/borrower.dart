@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-enum Category { tools, all }
+enum Category { tools, all, toys, sportsequipment }
 
 class Borrower extends StatelessWidget {
   @override
@@ -59,9 +59,9 @@ class Borrower extends StatelessWidget {
                       createItem('Hoover Linx Stick Vacuumcleaner',
                           'Like a lawn mower, but for your living-room.',
                           'Hans', context, 'lib/src/images/vacuumcleaner.jpg'),
-                      createItem('DEWALT DC759KA',
-                          'My power drill! It works great for everyday stuff.',
-                          'Göran', context),
+                      createItem('Our old skis',
+                          'Our old skis, maybe someone can have fun with them.',
+                          'Katarina', context, 'lib/src/images/skis.jpg'),
                     ],
                   )
               )
@@ -126,6 +126,14 @@ class _CategorySelectorState extends State<CategorySelector> {
         });
       },
       items: <DropdownMenuItem<Category>>[
+        const DropdownMenuItem(
+          value: Category.sportsequipment,
+          child: Text('Sports-Equipment'),
+        ),
+        const DropdownMenuItem(
+          value: Category.toys,
+          child: Text('Toys'),
+        ),
         const DropdownMenuItem(
           value: Category.tools,
           child: Text('Tools'),
