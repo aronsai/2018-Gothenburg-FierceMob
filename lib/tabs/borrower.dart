@@ -37,6 +37,10 @@ class Borrower extends StatelessWidget {
                           FlatButton(
                             child: const Text('Borrow it!'),
                             onPressed: () {
+                              Navigator.push(
+                                context,
+                                MaterialPageRoute(builder: (context) => Lending()),
+                              );
                               /* ... */
                             },
                           ),
