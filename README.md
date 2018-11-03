@@ -1,6 +1,13 @@
 # 2018-Gothenburg-FierceMob
 
-## 
+## Information
 
-For help getting started with Flutter, view our online
-[documentation](https://flutter.io/).
+|  |  |
+| ------ | ------ |
+| Team name | Fierce Mob |
+| Chosen case | Local Sharing |
+| The solution | Smartphone app for Android and iOS |
+| Applied open source license | MIT |
+| Services used | [Flutter](https://flutter.io/) |
+| Languages used | Dart |
+| Team members | Moritz Denke, Mahmoud Hurria, Ara Jafarzadeh, Aswin Kumar Nagarajan, Martynas Lekeckas, Aron Sai |
