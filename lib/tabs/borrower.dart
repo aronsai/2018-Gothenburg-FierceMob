@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-enum Category { tools, all }
+enum Category { tools, all, toys, sportsequipment }
 
 class Borrower extends StatelessWidget {
   @override
@@ -126,6 +126,14 @@ class _CategorySelectorState extends State<CategorySelector> {
         });
       },
       items: <DropdownMenuItem<Category>>[
+        const DropdownMenuItem(
+          value: Category.sportsequipment,
+          child: Text('Sports-Equipment'),
+        ),
+        const DropdownMenuItem(
+          value: Category.toys,
+          child: Text('Toys'),
+        ),
         const DropdownMenuItem(
           value: Category.tools,
           child: Text('Tools'),
